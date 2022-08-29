@@ -8,9 +8,9 @@ app.use(express.json());
 app.get("/", createCourse);
 
 app.post("/nomes",(request, response) => {
-    const{ name } = request.body;
+    const { name } = request.body;
     
-    for (var i = 0; i < name.lenght; i++){
+    for (var i = 0; i < name.length; i++){
         let letras:Array<string> = [] ;
         letras[i] = name[i];
        return response.json(letras[i]);

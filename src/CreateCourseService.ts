@@ -11,7 +11,9 @@ interface Course{
 
 class CreateCourseService {
     execute({day, month, year, hour, minute, second}:Course){
-        console.log("Dia: ",day,"/",month,"/",year," Horas: ", hour, ":", minute, ":",second);
+        let result:Array<string|number>;
+        result = ["Dia: ", day, "/", month, "/", year, " Horas: ", hour, ":", minute, ":",second];
+        return response.json(result);
     }
 }
 
